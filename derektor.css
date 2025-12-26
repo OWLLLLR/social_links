@@ -1,0 +1,123 @@
+
+
+* {
+
+    margin: 0;
+    /*ВНЕШНИЙ ОТСТУП*/
+    padding: 0;
+    /* ВНУТРЕННИЙ ОТС*/
+    box-sizing: border-box;
+    /*СПОСОБ РАЗМЕЩЕНИЯ*/
+    font-size: 33px;
+}
+
+body {
+    display: flex;
+    /*СПОСОБ ОТОБРАЖЕНИЯ*/
+    justify-content: center;
+    /*РАЗМЕЩЕНИЯ ПО X*/
+    align-items: center;
+    /*РАЗМЕЩЕНИЯ ПО Y*/
+    background: linear-gradient(145deg, #8b2851, #0043bc);
+    /*ЦВЕТ ФОНА*/
+    min-height: 100vh;
+    /*ЕДИНИТСЯ ВХ СОООТВЕТСТВИИ 1% ОТ ВЫСОТЫ ОБЛАСТИ*/
+}
+
+ul {
+    position: relative;
+    /*ПОЗИЦИОНИРОВАНИЕ ОБДЖЕКТА НА СУЕТЕ*/
+    transform: skewY(-14deg)
+        /*ТРАНСОФРА ОБДЖЕКТА ДЕГ ЭТО ЭТО ГРАДУСЫ НЕ УТУБЕРЫ*/
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    /*СТИЛИСТИКА СПИСОЧКА*/
+    padding: 20px;
+    background: #0f4382;
+    z-index: var(--i);
+    /*МЕНЯЕТ СЛОЙ ОБДЖЕКТА*/
+    transition: .5s;
+    box-shadow: 0 0 5px #fff
+        /*ТЕНЬ ОБДЖЕКТА*/
+}
+
+ul li:hover {
+    background: #0f52a4;
+    transform: translateX(-85px)
+}
+
+
+
+
+
+ul li::after {
+    content: "";
+    position: absolute;
+    background: #0f4382;
+    width: 100%;
+    height: 42px;
+    top: -40px;
+    left: 0;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: .5s;
+    box-shadow: 0 0 5px #fff
+}
+
+ul li::before
+
+/*поток выбранного элика*/
+    {
+    content: "";
+    /*значение содиржимле*/
+    position: absolute;
+    /*позиция обджекта по я не понимаю чему*/
+    width: 40px;
+    /*что то со шрифтом пишут в инете*/
+    height: 100%;
+    /*увиличает объет в процентах*/
+    top: 0px;
+    /*перемешение по родственной какойто стороне по левту и по райту ваще по другому ай донт кноу */
+    background: #0c3669;
+    left: -40px;
+    /*обжект перед чемто может перемищатся взависимоти от какойта фигни*/
+    transform-origin: right;
+    /*ращает вокруг точки*/
+    transform: skewY(45deg);
+    /*разтяжение по градусам*/
+    transition: .5s;
+    /*анимация объекта в 05 сек*/
+    box-shadow: 0 0 5px #fff
+        /*тень обджекта*/
+}
+
+ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    display: block;
+    letter-spacing: .5em;
+    transition: .5s;
+}
+
+ul li:hover {
+    color: #ffff;
+    text-shadow: #ffff 1px 0 5px;
+}
+
+ul li img {
+    position: absolute;
+    width: 30px;
+    height: 70%;
+    transform-origin: right;
+    transform: skewY(45deg);
+    left: -35px;
+    top: 7px;
+}
+
+.second {
+    top: 80px;
+    left: 100px;
+}
